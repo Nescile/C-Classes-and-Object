@@ -1,0 +1,52 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+class Book{
+
+private:
+    
+    string title;
+    string author;
+    string publisher;
+    int year;
+    
+public:
+    
+    Book(string title, string author, string publisher, int year) {
+        this->title = title;
+        this->author = author;
+        this->publisher = publisher;
+        this->year = year;
+    
+    }
+    
+    void displayInfo() {
+        cout << "Title: " << title << endl;
+        cout << "Author: " << author << endl;
+        cout << "Publisher: " << publisher << endl;
+        cout << "Year: " << year << endl;
+        cout << endl;        
+    }    
+};
+
+int main() {
+    
+    Book book1("Hell University", "KnightInBlack", "PSICOM", 2016);
+    Book book2("Catching Fire", "Suzanne Collins", "Scholastic", 2009);
+    Book book3("I Love You Since 1892", "Binibining Mia", "ABS-CBN Publishing", 2018);
+    
+    cout << "Book 1:" << endl;
+    book1.displayInfo();
+
+    cout << "Book 2:" << endl;
+    book2.displayInfo();
+
+    cout << "Book 3:" << endl;
+    book3.displayInfo();
+
+    cout << "By: Nescile Joy C. Latras" << endl;
+    return 0;
+    
+}
