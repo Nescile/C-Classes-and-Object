@@ -1,0 +1,32 @@
+#include <iostream>
+#include <string>
+
+
+using namespace std;
+
+class Person {
+public: 
+
+    Person(const string& name, const string& number): name_(name), number_(number) {}
+        
+    string getName() const { return name_; }
+    string getNumber() const { return number_; }
+
+private: 
+    string name_;
+    string number_;
+};
+
+int main(){
+    string name, number;
+    
+    cout << "Your Name: ";
+    getline(cin, name);
+    cout << "Your ID Number: ";
+    getline(cin, number);
+    
+    Person person(name, number);
+    
+    cout << "\nYour name: " << person.getName() << " by " << person.getNumber() << endl;
+    return 0;
+}
